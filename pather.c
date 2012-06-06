@@ -274,7 +274,6 @@ int WINAPI WinMain(
 	char* joined;
 	char* path;
 	struct linked_list* list;
-	LRESULT refresh_result;
 
 	path = get_path();
 	if (path == 0) {
