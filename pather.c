@@ -185,7 +185,7 @@ char* get_path(void)
 	open_result = RegOpenKeyEx(
 		HKEY_LOCAL_MACHINE, 
 		"SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Environment", 
-		0,
+		NULL,
 		KEY_QUERY_VALUE,
 		&hkey);
 
@@ -222,7 +222,7 @@ char* get_path(void)
 	RegCloseKey(hkey);
 	
 	if (query_result != ERROR_SUCCESS) {
-		return NULL;
+		return 0;
 	}
 
 	return value_buf;
@@ -236,7 +236,7 @@ int set_path(char* path)
 	open_result = RegOpenKeyEx(
 		HKEY_LOCAL_MACHINE, 
 		"SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Environment", 
-		0,
+		NULL,
 		KEY_SET_VALUE,
 		&hkey);
 
@@ -274,9 +274,10 @@ int WINAPI WinMain(
 	char* joined;
 	char* path;
 	struct linked_list* list;
+	LRESULT refresh_result;
 
 	path = get_path();
-	if (path == NULL) {
+	if (path == 0) {
 		return 1;
 	}
 
@@ -307,7 +308,7 @@ int WINAPI WinMain(
 	SendMessageTimeout(
 		HWND_BROADCAST, 
 		WM_SETTINGCHANGE, 
-		0, 
+		NULL, 
 		(LPARAM) "Environment", 
 		SMTO_ABORTIFHUNG,
 		1000, 
