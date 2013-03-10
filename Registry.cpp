@@ -11,7 +11,7 @@ using namespace std;
 //
 Registry::Registry() {
     LPCSTR envKey = "System\\CurrentControlSet\\Control\\Session Manager\\Environment";
-    long openResult = RegOpenKeyEx(HKEY_LOCAL_MACHINE, envKey, NULL, KEY_READ, &hkey);
+    long openResult = RegOpenKeyEx(HKEY_LOCAL_MACHINE, envKey, NULL, KEY_WRITE|KEY_READ, &hkey);
     if (openResult != ERROR_SUCCESS) {
         throw "Unable to open registry";
     }
