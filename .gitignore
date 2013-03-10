@@ -2,3 +2,7 @@
 *.opensdf
 *.sdf
 ipch
+*.suo
+Thumbs.db
+*.bak
+Debug/

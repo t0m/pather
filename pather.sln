@@ -1,7 +1,7 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual C++ Express 2010
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pather", "pather.vcxproj", "{889718DF-F628-4B9B-A07E-5CA4EEFB89DC}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pather", "pather.vcxproj", "{F6F741F9-28C6-4D5E-8F88-B638519BCBA6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +9,10 @@ Global
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{889718DF-F628-4B9B-A07E-5CA4EEFB89DC}.Debug|Win32.ActiveCfg = Debug|Win32
-		{889718DF-F628-4B9B-A07E-5CA4EEFB89DC}.Debug|Win32.Build.0 = Debug|Win32
-		{889718DF-F628-4B9B-A07E-5CA4EEFB89DC}.Release|Win32.ActiveCfg = Release|Win32
-		{889718DF-F628-4B9B-A07E-5CA4EEFB89DC}.Release|Win32.Build.0 = Release|Win32
+		{F6F741F9-28C6-4D5E-8F88-B638519BCBA6}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F6F741F9-28C6-4D5E-8F88-B638519BCBA6}.Debug|Win32.Build.0 = Debug|Win32
+		{F6F741F9-28C6-4D5E-8F88-B638519BCBA6}.Release|Win32.ActiveCfg = Release|Win32
+		{F6F741F9-28C6-4D5E-8F88-B638519BCBA6}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
