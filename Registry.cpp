@@ -2,7 +2,6 @@
 #include <memory>
 #include <Windows.h>
 #include "Registry.h"
-#include "Path.h"
 using namespace std;
 
 
@@ -31,31 +30,20 @@ Registry::Registry() {
         throw "Unable to query registry key";
     }
 
-    originalPath = string(keyBuf.get());
-    path = Path(originalPath);
+    path = string(keyBuf.get());
+}
+
+string Registry::getPath() {
+    return path;
 }
 
 Registry::~Registry() { 
     RegCloseKey(hkey); 
 }
 
-void Registry::save() {
-    string finalPath = path.get();
+void Registry::savePath(const string& path) {
+    
 
 }
 
-bool Registry::contains(const string& dir) {
-    return path.contains(dir);
-}
-
-void Registry::remove(const string& dir) {
-    path.remove(dir);
-}
-
-void Registry::add(const string& dir) {
-    path.add(dir);
-}
-
-HKEY hkey;
-Path path;
-string originalPath;
+const string path;

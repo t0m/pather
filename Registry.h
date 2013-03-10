@@ -9,14 +9,10 @@ public:
     Registry();
     ~Registry();
 
-    void save();
-    bool contains(const string& dir);
-    void remove(const string& dir);
-    void add(const string& dir);
-
+    void savePath(const string& path);
+    string getPath();
 
 private:
     HKEY hkey;
-    Path path;
-    string originalPath;
+    string path;
 };

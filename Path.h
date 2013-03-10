@@ -14,13 +14,13 @@ public:
     Path() { };
     Path(const string& pathStr);
 
-    void setPath(const string& pathStr);
     bool contains(const string& str);
     void remove(const string& str);
     void add(const string& str);
     string get();
 
 private:
+    void setPath(const string& pathStr);
     map<string, int, CaseInsensitive> pathMap; 
     int position;
 };
