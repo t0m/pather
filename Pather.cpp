@@ -16,13 +16,13 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPTSTR lpCmdLin
                                       MB_YESNO);
         if (remove == IDYES) {
             path.remove(targetDir);
-            reg.savePath(path.get());
+            //reg.savePath(path.get());
         }
         return 0;
     }
     
     path.add(targetDir);
-    reg.savePath(path.get());
+    //reg.savePath(path.get());
     return 0;
 }
 

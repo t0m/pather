@@ -33,12 +33,12 @@ Registry::Registry() {
     path = string(keyBuf.get());
 }
 
-string Registry::getPath() {
-    return path;
-}
-
 Registry::~Registry() { 
     RegCloseKey(hkey); 
+}
+
+string Registry::getPath() {
+    return path;
 }
 
 void Registry::savePath(const string& path) {
