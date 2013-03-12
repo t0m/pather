@@ -42,8 +42,10 @@ Registry::~Registry() {
 }
 
 void Registry::savePath(const string& path) {
-    
-
+    long saveResult = RegSetValueEx(hkey, "Path", 0, REG_SZ, (const BYTE*) path.c_str(), path.size() + 1);
+    if (saveResult != ERROR_SUCCESS) {
+        throw "Unable to save registry key";
+    }
 }
 
 const string path;
